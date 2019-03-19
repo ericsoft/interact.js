@@ -161,7 +161,7 @@ declare namespace interact {
     target: DOMElement
     relatedTarget: DOMElement
     currentTarget: DOMElement
-    preventDefault ()
+    preventDefault (): void
     pageX: number
     pageY: number
     clientX: number
@@ -273,7 +273,7 @@ declare namespace interact {
     on ( opt: OnEventFunctions ) : Interactable
     styleCursor ( yesno: boolean ) : Interactable
     createSnapGrid ( opt: { x: number, y: number, range: number, offset: Position } ) : SnapFunction
-    test ( x : SnapFunction )
+    test ( x : SnapFunction ): void
   }
 
   interface InteractOptions {
@@ -288,11 +288,11 @@ declare namespace interact {
     stop ( event: any ) : InteractStatic
     pointerMoveTolerance ( tol?: number ) : number | InteractStatic
     // TODO
-    isSet ( any ) : any
-    off ( any ) : any
-    debug ( any ) : any
-    addDocument ( any ) : any
-    removeDocument ( any ) : any
+    isSet ( any: any ) : any
+    off ( any: any ) : any
+    debug ( any: any ) : any
+    addDocument ( any: any ) : any
+    removeDocument ( any: any ) : any
   }
 }
 
